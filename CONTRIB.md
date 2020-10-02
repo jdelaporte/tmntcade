@@ -13,3 +13,9 @@ https://www.python.org/downloads/
 1. Set up git config
 `git config --global user.name "Your Name"`
 `git config --global user.email "youremail@aol.com"`
+
+
+# The Code
+Almost all the heavy lifting is in field.py
+
+The pygame functions are documented here: https://www.pygame.org/docs/ref/surface.html.
