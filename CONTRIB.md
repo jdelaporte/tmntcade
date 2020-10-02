@@ -11,5 +11,5 @@ https://www.python.org/downloads/
 `pip install pygame`
 
 1. Set up git config
-`git config --global user.email "joannadelaporte@gmail.com"`
-`git config --global user.email "joannadelaporte@gmail.com"`
+`git config --global user.name "Your Name"`
+`git config --global user.email "youremail@aol.com"`
