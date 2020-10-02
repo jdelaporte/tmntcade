@@ -100,10 +100,10 @@ class PlayField():
 
     def add_flora(self):
         """Add places to hide."""
-        # self.fish += [ScaryFish()]
+        # TODO: Flora to spawn *not* all in a straight vertical column.
         self.flora += [Flora(variety=random.choice(range(0, 5)),
                              size=self.flora_size,
-                             pos_x=self.max_x-200, # TODO: Factor in self.clock
+                             pos_x=self.max_x-200+self.clock, # TODO: Factor in self.clock
                              pos_y=random.choice(range(0, self.min_y)))]
                        # Flora(variety=1, pos_x=200, img_color=pygame.Color(255, 0, 0)),
 
@@ -123,6 +123,7 @@ class PlayField():
 
 
         self.screen.scroll(dx=-self.clock)
+        # TODO: Players who would drift off screen get stuck at the minimum edge.
 
         pygame.draw.rect(self.screen, Colors.DARK_BLUE,
                          [self.max_x-self.clock, 0, self.clock, self.min_y])
@@ -169,7 +170,7 @@ class PlayField():
         # The field adds things
         if random.randint(0, 10000) > (9990):  # New Fish
             self.add_fish()
-        if random.randint(0, 10000) > (9990):  # New Flora
+        if random.randint(0, 10000) > (9000):  # New Flora
             self.add_flora()
 
         # --- Act
